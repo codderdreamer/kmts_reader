@@ -1,7 +1,7 @@
 import os
 import json
 
-file_path = "/home/pi/Desktop/cpbox_kutu/"
+file_path = "/home/pi/Desktop/kmts_reader/"
 
 class Config():
     def __init__(self,application):
