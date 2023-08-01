@@ -29,20 +29,20 @@
             "exposure" : 75,
 
             "points" : {
-                "left_top_x" : 189,
-                "left_top_y" : 232,
+                "left_top_x" : 555,
+                "left_top_y" : 400,
 
-                "left_bottom_x" : 299,
-                "left_bottom_y" : 232,
+                "left_bottom_x" : 555,
+                "left_bottom_y" : 530,
 
-                "right_top_x" : 189,
-                "right_top_y" : 342,
+                "right_top_x" : 685,
+                "right_top_y" : 400,
 
-                "right_bottom_x" : 299,
-                "right_bottom_y" : 342
+                "right_bottom_x" : 685,
+                "right_bottom_y" : 530
             },
 
-            "resolution" : 110,
+            "resolution" : 130,
             "rotation_clockwise_counter" : 3,
             "threshold" : 0.5
         }
