@@ -141,7 +141,7 @@ class CameraModule():
         image_original = 255 - image_original
 
         data_matrix_finded = False
-        threshold_counter = 0.5
+        threshold_counter = 0.6
 
         _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
         cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'thresh.png',threshold)
@@ -149,7 +149,6 @@ class CameraModule():
         finish = time.time()
         print("Decode edilme:", finish-start)
         print(data)
-        print("Decode edilme:", finish-start)
 
         # while data_matrix_finded == False:
         #     print("Deneniyor threshold_counter:",threshold_counter )
