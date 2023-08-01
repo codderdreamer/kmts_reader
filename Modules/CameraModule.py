@@ -138,12 +138,20 @@ class CameraModule():
         print("Data Matrix Verification...")
         start = time.time()
         image_original = cv2.imread(self.application.test_1_file_path + str(stage) + '/' + 'colourful.png')
+
+        image_original = self.cut_colourful_image(image_original)
+
+        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'cutting.png',threshold)
+
+
         image_original = 255 - image_original
 
         data_matrix_finded = False
         threshold_counter = 0.5
 
-        image_original = self.cut_colourful_image(image_original)
+        
+
+        
 
         _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
         cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'thresh.png',threshold)
