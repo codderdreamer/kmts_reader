@@ -136,6 +136,7 @@ class CameraModule():
             
     def dataMatrix_verification(self,stage):
         print("Data Matrix Verification...")
+        start = time.time()
         image_original = cv2.imread(self.application.test_1_file_path + str(stage) + '/' + 'colourful.png')
         image_original = 255 - image_original
 
@@ -145,7 +146,10 @@ class CameraModule():
         _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
         cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'thresh.png',image_original)
         data = pylibdmtx.decode(threshold)
+        finish = time.time()
+        print("Decode edilme:", finish-start)
         print(data)
+        print("Decode edilme:", finish-start)
 
         # while data_matrix_finded == False:
         #     print("Deneniyor threshold_counter:",threshold_counter )
