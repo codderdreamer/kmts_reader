@@ -69,7 +69,7 @@ class CameraModule():
     
     def cut_colourful_image(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_points(),self.get_colourful_resolution_points())
-        frame = cv2.warpPerspective(frame,matrix,(110,110))
+        frame = cv2.warpPerspective(frame,matrix,(130,130))
         return frame
     
     def image_rotate_clockwise(self,frame,counter):
@@ -105,7 +105,7 @@ class CameraModule():
                 success,frame = self.colourful.read()
             if success:
                 self.colourful_counter = 0
-                frame = self.cut_colourful_image(frame)
+                # frame = self.cut_colourful_image(frame)
                 frame = self.image_rotate_clockwise(frame,self.application.config.camera.colourful.rotation_clockwise_counter)
                 # frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
                 cv2.imwrite( self.application.test_1_file_path + str(stage) + '/' +  'colourful.png', frame)
