@@ -69,7 +69,7 @@ class CameraModule():
     
     def cut_colourful_image(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_points(),self.get_colourful_resolution_points())
-        frame = cv2.warpPerspective(frame,matrix,(700,700))
+        frame = cv2.warpPerspective(frame,matrix,(110,110))
         return frame
     
     def image_rotate_clockwise(self,frame,counter):
@@ -142,6 +142,8 @@ class CameraModule():
 
         data_matrix_finded = False
         threshold_counter = 0.5
+
+        image_original = self.cut_colourful_image(image_original)
 
         _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
         cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'thresh.png',threshold)
