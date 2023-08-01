@@ -1,0 +1,63 @@
+{
+    "camera" : {
+
+        "infrared" : {
+
+            "exposure" : 5,
+
+            "points" : {
+                "left_top_x" : 640,
+                "left_top_y" : 205,
+
+                "left_bottom_x" : 625,
+                "left_bottom_y" : 930,
+
+                "right_top_x" : 1335,
+                "right_top_y" : 215,
+
+                "right_bottom_x" : 1305,
+                "right_bottom_y" : 905
+            },
+
+            "resolution" : 700,
+            "rotation_clockwise_counter" : 1,
+            "threshold" : 0.4
+        },
+
+        "colourful" : {
+
+            "exposure" : 75,
+
+            "points" : {
+                "left_top_x" : 591,
+                "left_top_y" : 255,
+
+                "left_bottom_x" : 574,
+                "left_bottom_y" : 1174,
+
+                "right_top_x" : 1413,
+                "right_top_y" : 262,
+
+                "right_bottom_x" : 1427,
+                "right_bottom_y" : 1160
+            },
+
+            "resolution" : 700,
+            "rotation_clockwise_counter" : 3,
+            "threshold" : 0.5
+        }
+    },
+
+    "modbus" : {
+        "port" : "/dev/ttyACM0"
+    },
+
+    "light_intensity" : {
+        "white" : 600,
+        "blue" : 1000,
+        "IR" : 1000
+    }
+
+
+    
+}
