@@ -29,17 +29,17 @@
             "exposure" : 75,
 
             "points" : {
-                "left_top_x" : 232,
-                "left_top_y" : 189,
+                "left_top_x" : 189,
+                "left_top_y" : 232,
 
-                "left_bottom_x" : 232,
-                "left_bottom_y" : 299,
+                "left_bottom_x" : 299,
+                "left_bottom_y" : 232,
 
-                "right_top_x" : 342,
-                "right_top_y" : 189,
+                "right_top_x" : 189,
+                "right_top_y" : 342,
 
-                "right_bottom_x" : 342,
-                "right_bottom_y" : 299
+                "right_bottom_x" : 299,
+                "right_bottom_y" : 342
             },
 
             "resolution" : 110,
