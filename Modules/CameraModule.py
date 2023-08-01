@@ -144,7 +144,7 @@ class CameraModule():
         threshold_counter = 0.4
 
         _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
-        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'thresh.png',image_original)
+        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'thresh.png',threshold)
         data = pylibdmtx.decode(threshold)
         finish = time.time()
         print("Decode edilme:", finish-start)
