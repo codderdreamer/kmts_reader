@@ -143,10 +143,11 @@ class CameraModule():
         threshold_counter = 0
 
         while data_matrix_finded == False:
+            print("Deneniyor threshold_counter:",threshold_counter )
             if threshold_counter > 1:
                 print("İşlem sonlandı. Data matrix bulunamadı. Ththreshold_counter 1")
                 break
-            threshold_counter = threshold_counter + 0.1
+            
             _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
             data = pylibdmtx.decode(threshold)
             if len(data) != 0:
@@ -154,4 +155,8 @@ class CameraModule():
                 data_matrix_finded = True
             else:
                 print("threshold_counter: ",threshold_counter, " Bulunamadı.")
+            
+            threshold_counter = threshold_counter + 0.1
+
+            time.sleep(1)
         
