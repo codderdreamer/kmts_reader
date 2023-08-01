@@ -34,4 +34,12 @@ class Application():
 
         self.process = ProcessModule(self)
         threading.Thread(target=self.process.run,daemon=True).start()
+
+Application()
+while True:
+    time.sleep(10)
+    if BootError:
+        print("BootError")
+        time.sleep(10)
+        break
         
