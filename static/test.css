@@ -1,0 +1,61 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    }
+
+*, *:before, *:after {
+    margin: inherit;
+    padding: inherit;
+}
+
+body{
+    background-color: black;
+}
+
+.header-section{
+    /* background-color: rgb(36, 36, 36); */
+    width: auto;
+    height: 75px;
+    text-align: center;
+    justify-content: center;
+}
+
+h1{
+    line-height: 75px !important;
+    color: rgb(97, 150, 230) !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.content-devices{
+    background-color: rgb(36, 36, 36);
+    width: auto;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+#ir-camera-icon{
+    width: auto;
+    height: 25px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#colourful-camera-icon{
+    width: auto;
+    height: 25px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-right: 10px;
+    /* background-color: rgb(255, 68, 68); */
+}
+
+#usb-icon{
+    width: auto;
+    height: 25px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}

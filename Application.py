@@ -11,6 +11,8 @@ BootError=False
 class Application():
     def __init__(self):
 
+        self.test_1_file_path = "/home/pi/Desktop/kmts_reader/static/assets/test_1/"
+
         # Config Dosyasını Oku
         self.config = Config(self)
         data = self.config.read_config_file()
