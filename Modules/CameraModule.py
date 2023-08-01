@@ -141,7 +141,7 @@ class CameraModule():
 
         image_original = self.cut_colourful_image(image_original)
 
-        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'cutting.png',threshold)
+        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'cutting.png',image_original)
 
 
         image_original = 255 - image_original
