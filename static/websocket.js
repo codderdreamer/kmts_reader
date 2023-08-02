@@ -68,18 +68,33 @@ function connect(){
         } else if (incomingData.Command == "seriNo1-text") {
             document.getElementById("seriNo1-text").innerHTML = "Altın üzerindeki 1. Seri numarası bulunuyor..."
         } else if (incomingData.Command == "seriNo1-result") {
+            if(incomingData.Data=="" || incomingData.Data==null){
+                document.getElementById("seriNo1-result").className = "false-data"
+            } else {
+                document.getElementById("seriNo1-result").className = "true-data"
+            }
             document.getElementById("seriNo1-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo1-img") {
             document.getElementById("seriNo1-img").src = "../static/assets/test_1/1/seriNo1.png"
         } else if (incomingData.Command == "seriNo2-text") {
             document.getElementById("seriNo2-text").innerHTML = "Altın üzerindeki 2. Seri numarası bulunuyor..."
-        } else if (incomingData.Command == "seriNo1-result") {
+        } else if (incomingData.Command == "seriNo2-result") {
+            if(incomingData.Data=="" || incomingData.Data==null){
+                document.getElementById("seriNo2-result").className = "false-data"
+            } else {
+                document.getElementById("seriNo2-result").className = "true-data"
+            }
             document.getElementById("seriNo2-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo2-img") {
             document.getElementById("seriNo2-img").src = "../static/assets/test_1/1/seriNo2.png"
         } else if (incomingData.Command == "seriNo3-text") {
             document.getElementById("seriNo3-text").innerHTML = "Altın üzerindeki 3. Seri numarası bulunuyor..."
         } else if (incomingData.Command == "seriNo3-result") {
+            if(incomingData.Data=="" || incomingData.Data==null){
+                document.getElementById("seriNo3-result").className = "false-data"
+            } else {
+                document.getElementById("seriNo3-result").className = "true-data"
+            }
             document.getElementById("seriNo3-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo3-img") {
             document.getElementById("seriNo3-img").src = "../static/assets/test_1/1/seriNo3.png"
