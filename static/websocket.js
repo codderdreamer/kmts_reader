@@ -2,11 +2,6 @@
 // var ws = new WebSocket( "ws://192.168.1.139:9000" );
 var ws = new WebSocket( "ws://" + document.location.hostname + ":9000");
 
-header ("Pragma-directive: no-cache");
-header ("Cache-directive: no-cache");
-header ("Cache-control: no-cache");
-header ("Pragma: no-cache");
-header ("Expires: 0");
 
 function createText(textid,whichSectionId){
     var template = document.getElementById('text-template')
