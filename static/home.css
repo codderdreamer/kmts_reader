@@ -51,7 +51,15 @@ h1{
 }
 
 .column{
-    display: inline-block;
     width: 250px;
     height: auto;
+    float: left;
+}
+
+.true-data{
+    background-color: rgb(7, 202, 0);
+}
+
+.false-data{
+    background-color: rgb(199, 2, 2);
 }
