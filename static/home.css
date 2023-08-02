@@ -5,13 +5,17 @@ html {
     font-family: 'Roboto', sans-serif;
     }
 
+body{
+    background-color: rgb(184, 184, 184);
+}
+
 *, *:before, *:after {
     margin: inherit;
     padding: inherit;
 }
 
 .header-section{
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(131, 131, 131);
     width: auto;
     height: 75px;
     text-align: center;
