@@ -46,14 +46,14 @@ class CameraModule():
         self.datamatrix_readed = False
 
     def get_colourful_points(self):
-        x1 = int(self.application.config.camera.colourful.points.left_top_x)
-        y1 = int(self.application.config.camera.colourful.points.left_top_y)
-        x2 = int(self.application.config.camera.colourful.points.left_bottom_x)
-        y2 = int(self.application.config.camera.colourful.points.left_bottom_y)
-        x3 = int(self.application.config.camera.colourful.points.right_top_x)
-        y3 = int(self.application.config.camera.colourful.points.right_top_y)
-        x4 = int(self.application.config.camera.colourful.points.right_bottom_x)
-        y4 = int(self.application.config.camera.colourful.points.right_bottom_y)
+        x1 = int(self.application.config.camera.colourful.dataMatrixPoints.left_top_x)
+        y1 = int(self.application.config.camera.colourful.dataMatrixPoints.left_top_y)
+        x2 = int(self.application.config.camera.colourful.dataMatrixPoints.left_bottom_x)
+        y2 = int(self.application.config.camera.colourful.dataMatrixPoints.left_bottom_y)
+        x3 = int(self.application.config.camera.colourful.dataMatrixPoints.right_top_x)
+        y3 = int(self.application.config.camera.colourful.dataMatrixPoints.right_top_y)
+        x4 = int(self.application.config.camera.colourful.dataMatrixPoints.right_bottom_x)
+        y4 = int(self.application.config.camera.colourful.dataMatrixPoints.right_bottom_y)
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
     
     def get_colourful_resolution_points(self):
@@ -67,7 +67,7 @@ class CameraModule():
         y4 = int(self.application.config.camera.colourful.resolution)
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
     
-    def cut_colourful_image(self,frame):
+    def cut_colourful_image_dataMatrix(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_points(),self.get_colourful_resolution_points())
         frame = cv2.warpPerspective(frame,matrix,(int(self.application.config.camera.colourful.resolution),int(self.application.config.camera.colourful.resolution)))
         return frame
@@ -105,9 +105,7 @@ class CameraModule():
                 success,frame = self.colourful.read()
             if success:
                 self.colourful_counter = 0
-                # frame = self.cut_colourful_image(frame)
                 frame = self.image_rotate_clockwise(frame,self.application.config.camera.colourful.rotation_clockwise_counter)
-                # frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
                 cv2.imwrite( self.application.test_1_file_path + str(stage) + '/' +  'colourful.png', frame)
                 return True
             else:
@@ -139,7 +137,7 @@ class CameraModule():
         start = time.time()
         image_original = cv2.imread(self.application.test_1_file_path + str(stage) + '/' + 'colourful.png')
 
-        image_original = self.cut_colourful_image(image_original)
+        image_original = self.cut_colourful_image_dataMatrix(image_original)
 
         cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'cutting.png',image_original)
 

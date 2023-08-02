@@ -38,19 +38,66 @@ class Config():
         self.camera.infrared.threshold = float(data["camera"]["infrared"]["threshold"])
         # colourful
         self.camera.colourful.exposure = int(data["camera"]["colourful"]["exposure"])
-        self.camera.colourful.points.left_top_x = int(data["camera"]["colourful"]["points"]["left_top_x"])
-        self.camera.colourful.points.left_top_y = int(data["camera"]["colourful"]["points"]["left_top_y"])
-        self.camera.colourful.points.left_bottom_x = int(data["camera"]["colourful"]["points"]["left_bottom_x"])
-        self.camera.colourful.points.left_bottom_y = int(data["camera"]["colourful"]["points"]["left_bottom_y"])
-        self.camera.colourful.points.right_top_x = int(data["camera"]["colourful"]["points"]["right_top_x"])
-        self.camera.colourful.points.right_top_y = int(data["camera"]["colourful"]["points"]["right_top_y"])
-        self.camera.colourful.points.right_bottom_x = int(data["camera"]["colourful"]["points"]["right_bottom_x"])
-        self.camera.colourful.points.right_bottom_y = int(data["camera"]["colourful"]["points"]["right_bottom_y"])
         self.camera.colourful.resolution = int(data["camera"]["colourful"]["resolution"])
         self.camera.colourful.rotation_clockwise_counter = int(data["camera"]["colourful"]["rotation_clockwise_counter"])
         self.camera.colourful.threshold = float(data["camera"]["colourful"]["threshold"])
+
+        # data matrix 
+        self.camera.colourful.dataMatrixPoints.left_top_x = int(data["camera"]["colourful"]["dataMatrixPoints"]["left_top_x"])
+        self.camera.colourful.dataMatrixPoints.left_top_y = int(data["camera"]["colourful"]["dataMatrixPoints"]["left_top_y"])
+        self.camera.colourful.dataMatrixPoints.left_bottom_x = int(data["camera"]["colourful"]["dataMatrixPoints"]["left_bottom_x"])
+        self.camera.colourful.dataMatrixPoints.left_bottom_y = int(data["camera"]["colourful"]["dataMatrixPoints"]["left_bottom_y"])
+        self.camera.colourful.dataMatrixPoints.right_top_x = int(data["camera"]["colourful"]["dataMatrixPoints"]["right_top_x"])
+        self.camera.colourful.dataMatrixPoints.right_top_y = int(data["camera"]["colourful"]["dataMatrixPoints"]["right_top_y"])
+        self.camera.colourful.dataMatrixPoints.right_bottom_x = int(data["camera"]["colourful"]["dataMatrixPoints"]["right_bottom_x"])
+        self.camera.colourful.dataMatrixPoints.right_bottom_y = int(data["camera"]["colourful"]["dataMatrixPoints"]["right_bottom_y"])
+
+        # seri no 1 ( üst bölge )
+        self.camera.colourful.seriNoPoints1.left_top_x = int(data["camera"]["colourful"]["seriNoPoints1"]["left_top_x"])
+        self.camera.colourful.seriNoPoints1.left_top_y = int(data["camera"]["colourful"]["seriNoPoints1"]["left_top_y"])
+        self.camera.colourful.seriNoPoints1.left_bottom_x = int(data["camera"]["colourful"]["seriNoPoints1"]["left_bottom_x"])
+        self.camera.colourful.seriNoPoints1.left_bottom_y = int(data["camera"]["colourful"]["seriNoPoints1"]["left_bottom_y"])
+        self.camera.colourful.seriNoPoints1.right_top_x = int(data["camera"]["colourful"]["seriNoPoints1"]["right_top_x"])
+        self.camera.colourful.seriNoPoints1.right_top_y = int(data["camera"]["colourful"]["seriNoPoints1"]["right_top_y"])
+        self.camera.colourful.seriNoPoints1.right_bottom_x = int(data["camera"]["colourful"]["seriNoPoints1"]["right_bottom_x"])
+        self.camera.colourful.seriNoPoints1.right_bottom_y = int(data["camera"]["colourful"]["seriNoPoints1"]["right_bottom_y"])
+
+        # seri no 2 ( orta altının olduğu yerdeki bölge )
+        self.camera.colourful.seriNoPoints2.left_top_x = int(data["camera"]["colourful"]["seriNoPoints2"]["left_top_x"])
+        self.camera.colourful.seriNoPoints2.left_top_y = int(data["camera"]["colourful"]["seriNoPoints2"]["left_top_y"])
+        self.camera.colourful.seriNoPoints2.left_bottom_x = int(data["camera"]["colourful"]["seriNoPoints2"]["left_bottom_x"])
+        self.camera.colourful.seriNoPoints2.left_bottom_y = int(data["camera"]["colourful"]["seriNoPoints2"]["left_bottom_y"])
+        self.camera.colourful.seriNoPoints2.right_top_x = int(data["camera"]["colourful"]["seriNoPoints2"]["right_top_x"])
+        self.camera.colourful.seriNoPoints2.right_top_y = int(data["camera"]["colourful"]["seriNoPoints2"]["right_top_y"])
+        self.camera.colourful.seriNoPoints2.right_bottom_x = int(data["camera"]["colourful"]["seriNoPoints2"]["right_bottom_x"])
+        self.camera.colourful.seriNoPoints2.right_bottom_y = int(data["camera"]["colourful"]["seriNoPoints2"]["right_bottom_y"])
+
+
+        # seri no 3 (yatayda sağdaki bölge )
+        self.camera.colourful.seriNoPoints3.left_top_x = int(data["camera"]["colourful"]["seriNoPoints3"]["left_top_x"])
+        self.camera.colourful.seriNoPoints3.left_top_y = int(data["camera"]["colourful"]["seriNoPoints3"]["left_top_y"])
+        self.camera.colourful.seriNoPoints3.left_bottom_x = int(data["camera"]["colourful"]["seriNoPoints3"]["left_bottom_x"])
+        self.camera.colourful.seriNoPoints3.left_bottom_y = int(data["camera"]["colourful"]["seriNoPoints3"]["left_bottom_y"])
+        self.camera.colourful.seriNoPoints3.right_top_x = int(data["camera"]["colourful"]["seriNoPoints3"]["right_top_x"])
+        self.camera.colourful.seriNoPoints3.right_top_y = int(data["camera"]["colourful"]["seriNoPoints3"]["right_top_y"])
+        self.camera.colourful.seriNoPoints3.right_bottom_x = int(data["camera"]["colourful"]["seriNoPoints3"]["right_bottom_x"])
+        self.camera.colourful.seriNoPoints3.right_bottom_y = int(data["camera"]["colourful"]["seriNoPoints3"]["right_bottom_y"])
+
+
+        # digimark code
+        self.camera.colourful.digimarkCodePoints.left_top_x = int(data["camera"]["colourful"]["digimarkCodePoints"]["left_top_x"])
+        self.camera.colourful.digimarkCodePoints.left_top_y = int(data["camera"]["colourful"]["digimarkCodePoints"]["left_top_y"])
+        self.camera.colourful.digimarkCodePoints.left_bottom_x = int(data["camera"]["colourful"]["digimarkCodePoints"]["left_bottom_x"])
+        self.camera.colourful.digimarkCodePoints.left_bottom_y = int(data["camera"]["colourful"]["digimarkCodePoints"]["left_bottom_y"])
+        self.camera.colourful.digimarkCodePoints.right_top_x = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_top_x"])
+        self.camera.colourful.digimarkCodePoints.right_top_y = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_top_y"])
+        self.camera.colourful.digimarkCodePoints.right_bottom_x = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_bottom_x"])
+        self.camera.colourful.digimarkCodePoints.right_bottom_y = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_bottom_y"])
+
+
         # modbus port
         self.modbus_port = data["modbus"]["port"]
+        
         # light intensity
         self.light_intensity.white = int(data["light_intensity"]["white"])
         self.light_intensity.blue = int(data["light_intensity"]["blue"])
@@ -69,7 +116,11 @@ class LightIntensity():
 
 class Image():
     def __init__(self) -> None:
-        self.points = Points()
+        self.dataMatrixPoints = Points()
+        self.seriNoPoints1 = Points()
+        self.seriNoPoints2 = Points()
+        self.seriNoPoints3 = Points()
+        self.digimarkCodePoints = Points()
         self.exposure = None
         self.resolution = None
         self.rotation_clockwise_counter = None
@@ -89,6 +140,8 @@ class Points():
 
         self.right_bottom_x = None
         self.right_bottom_y = None
+
+
 
 
 
