@@ -330,7 +330,7 @@ class CameraModule():
         # Changing the image path
         IMAGE_PATH = self.application.test_1_file_path + str(stage) + '/' + 'seriNo3.png'
         # Same code here just changing the attribute from ['en'] to ['zh']
-        reader = easyocr.Reader(['tr'])
+        reader = easyocr.Reader(['en'],bool = True)
         result = reader.readtext(IMAGE_PATH,paragraph="False")
         print (result) 
         if len(result)>0:
