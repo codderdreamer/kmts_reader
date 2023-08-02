@@ -52,12 +52,11 @@ function connect(){
             document.getElementById("seriNo1-result").className = ""
             document.getElementById("seriNo2-result").className = ""
             document.getElementById("seriNo3-result").className = ""
-            caches.keys().then(list => list.map(key => caches.delete(key)))
             
         } else if (incomingData.Command == "colourful-img-text") {
             document.getElementById("colourful-img-text").innerHTML = "Renkli görüntü alınıyor..."
         } else if (incomingData.Command == "colourful-img") {
-            document.getElementById("colourful-img").src = "../static/assets/test_1/1/colourful.png"
+            document.getElementById("colourful-img").src = "../static/assets/test_1/1/colourful.png?" + Math.random();
         } else if (incomingData.Command == "dataMatrix-text") {
             document.getElementById("dataMatrix-text").innerHTML = "Data matrix bulunuyor ..."
         } else if (incomingData.Command == "dataMatrix-img") {
