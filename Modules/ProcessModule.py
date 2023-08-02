@@ -33,6 +33,7 @@ class ProcessModule():
             self.application.websocket_module.send_message_to_all("dataMatrix-data",str(data))
             
             # Seri No 1 Araması
+            self.application.websocket_module.send_message_to_all("seriNo1-text")
             self.application.camera.seri_no_1_verification(1)
 
             # Seri No 2 Araması

@@ -59,14 +59,17 @@ function connect(){
         } else if (incomingData.Command == "dataMatrix-img") {
             document.getElementById("dataMatrix-img").src = "../static/assets/test_1/1/dataMatrix.png"
         } else if (incomingData.Command == "dataMatrix-data") {
-            if(incomingData.Data==""){
-                document.getElementById("dataMatrix-data").className = "true-data"
-            } else {
+            if(incomingData.Data=="" || incomingData.Data==null){
                 document.getElementById("dataMatrix-data").className = "false-data"
+            } else {
+                document.getElementById("dataMatrix-data").className = "true-data"
             }
             document.getElementById("dataMatrix-data").innerHTML = "Data matrix : " + incomingData.Data
+        } else if (incomingData.Command == "seriNo1-text") {
+            document.getElementById("seriNo1-text").innerHTML = "Altın üzerindeki 1. Seri numarası bulunuyor..."
+        } else if (incomingData.Command == "seriNo1-result") {
+            document.getElementById("seriNo1-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         }
-        
 
 
 
