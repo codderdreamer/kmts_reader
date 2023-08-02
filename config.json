@@ -29,17 +29,17 @@
             "exposure" : 75,
 
             "dataMatrixPoints" : {
-                "left_top_x" : 555,
-                "left_top_y" : 400,
+                "left_top_x" : 810,
+                "left_top_y" : 1142,
 
-                "left_bottom_x" : 555,
-                "left_bottom_y" : 530,
+                "left_bottom_x" : 810,
+                "left_bottom_y" : 1272,
 
-                "right_top_x" : 685,
-                "right_top_y" : 400,
+                "right_top_x" : 940,
+                "right_top_y" : 1142,
 
-                "right_bottom_x" : 685,
-                "right_bottom_y" : 530
+                "right_bottom_x" : 940,
+                "right_bottom_y" : 1272
             },
 
             "seriNoPoints1" : {
