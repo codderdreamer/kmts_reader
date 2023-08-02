@@ -97,7 +97,7 @@ class Config():
 
         # modbus port
         self.modbus_port = data["modbus"]["port"]
-        
+
         # light intensity
         self.light_intensity.white = int(data["light_intensity"]["white"])
         self.light_intensity.blue = int(data["light_intensity"]["blue"])
@@ -116,6 +116,7 @@ class LightIntensity():
 
 class Image():
     def __init__(self) -> None:
+        self.points = Points()
         self.dataMatrixPoints = Points()
         self.seriNoPoints1 = Points()
         self.seriNoPoints2 = Points()
