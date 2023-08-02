@@ -57,31 +57,31 @@
             },
 
             "seriNoPoints2" : {
-                "left_top_x" : 555,
-                "left_top_y" : 400,
+                "left_top_x" : 360,
+                "left_top_y" : 940,
 
-                "left_bottom_x" : 555,
-                "left_bottom_y" : 530,
+                "left_bottom_x" : 360,
+                "left_bottom_y" : 1070,
 
-                "right_top_x" : 685,
-                "right_top_y" : 400,
+                "right_top_x" : 620,
+                "right_top_y" : 940,
 
-                "right_bottom_x" : 685,
-                "right_bottom_y" : 530
+                "right_bottom_x" : 620,
+                "right_bottom_y" : 1070
             }, 
 
             "seriNoPoints3" : {
-                "left_top_x" : 555,
-                "left_top_y" : 400,
+                "left_top_x" : 780,
+                "left_top_y" : 780,
 
-                "left_bottom_x" : 555,
-                "left_bottom_y" : 530,
+                "left_bottom_x" : 780,
+                "left_bottom_y" : 1050,
 
-                "right_top_x" : 685,
-                "right_top_y" : 400,
+                "right_top_x" : 1050,
+                "right_top_y" : 780,
 
-                "right_bottom_x" : 685,
-                "right_bottom_y" : 530
+                "right_bottom_x" : 1050,
+                "right_bottom_y" : 1050
             }, 
 
             "digimarkCodePoints" : {
