@@ -19,15 +19,19 @@ class ProcessModule():
             print("Running...")
             self.application.websocket_module.send_message_to_all("Clear")
             # 1. örnek için renkli kameradan renkli görüntüyü al
+            self.application.websocket_module.send_message_to_all("colourful-img-text")
+
             if self.application.camera.save_colourful_image(1):
-                self.application.websocket_module.send_message_to_all("colourful-img-1")
+                self.application.websocket_module.send_message_to_all("colourful-img")
             else:
-                self.application.websocket_module.send_message_to_all("colourful-text-1","Renkli kamera görüntüsü alınamadı!")
                 return False
             
             # Data Matrix Araması
-            self.application.camera.dataMatrix_verification(1)
-
+            self.application.websocket_module.send_message_to_all("dataMatrix-text")
+            data = self.application.camera.dataMatrix_verification(1)
+            self.application.websocket_module.send_message_to_all("dataMatrix-img")
+            self.application.websocket_module.send_message_to_all("dataMatrix-data",str(data))
+            
             # Seri No 1 Araması
             self.application.camera.seri_no_1_verification(1)
 

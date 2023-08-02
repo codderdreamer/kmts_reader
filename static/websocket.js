@@ -35,19 +35,33 @@ function connect(){
         incomingData = JSON.parse( e.data );
         console.log(incomingData)
         if ( incomingData.Command == "Clear" ) {
-            document.getElementById("section-1").innerHTML = ""
-        } else if (incomingData.Command == "colourful-img-1") {
-            createImage('colourful-img-1',"../static/assets/test_1/1/colourful.png","section-1")
+            document.getElementById("colourful-img-text").innerHTML = ""
+            document.getElementById("colourful-img").src = ""
+            document.getElementById("dataMatrix-text").innerHTML = ""
+            document.getElementById("dataMatrix-img").src = ""
+            document.getElementById("dataMatrix-data").innerHTML = ""
+            document.getElementById("seriNo1-text").innerHTML = ""
+            document.getElementById("seriNo1-result").innerHTML = ""
+            document.getElementById("seriNo1-img").src = ""
+            document.getElementById("seriNo2-text").innerHTML = ""
+            document.getElementById("seriNo2-result").innerHTML = ""
+            document.getElementById("seriNo2-img").src = ""
+            document.getElementById("seriNo3-text").innerHTML = ""
+            document.getElementById("seriNo3-result").innerHTML = ""
+            document.getElementById("seriNo3-img").src = ""
+            
+        } else if (incomingData.Command == "colourful-img-text") {
+            document.getElementById("colourful-img-text").innerHTML = "Renkli görüntü alınıyor..."
+        } else if (incomingData.Command == "colourful-img") {
+            document.getElementById("colourful-img").src = "../static/assets/test_1/1/colourful.png"
+        } else if (incomingData.Command == "dataMatrix-text") {
+            document.getElementById("dataMatrix-text").innerHTML = "Data matrix bulunuyor ..."
+        } else if (incomingData.Command == "dataMatrix-img") {
+            document.getElementById("dataMatrix-img").src = "../static/assets/test_1/1/dataMatrix.png"
+        } else if (incomingData.Command == "dataMatrix-data") {
+            document.getElementById("dataMatrix-data").innerHTML = "Data matrix : " + incomingData.Data
         }
-
-
-
-
-
-
-
-
-
+        
 
 
 

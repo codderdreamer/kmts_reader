@@ -273,6 +273,11 @@ class CameraModule():
         finish = time.time()
         print("Decode edilme:", finish-start)
         print(data)
+        if len(data)>0:
+            return data[0][0].decode("utf-8")
+        else:
+            return None
+
 
     def seri_no_1_verification(self,stage):
         print("Seri No Verification")
