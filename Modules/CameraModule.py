@@ -294,6 +294,7 @@ class CameraModule():
         reader = easyocr.Reader(['tr'])
         result = reader.readtext(IMAGE_PATH,paragraph="False")
         print (result)
+        return result[0][1]
 
     def seri_no_2_verification(self,stage):
         print("Seri No Verification")
@@ -310,6 +311,10 @@ class CameraModule():
         reader = easyocr.Reader(['tr'])
         result = reader.readtext(IMAGE_PATH,paragraph="False")
         print (result) 
+        if len(result)>0:
+            return result[0][1]
+        else:
+            return None
 
     def seri_no_3_verification(self,stage):
         print("Seri No Verification")
@@ -328,6 +333,10 @@ class CameraModule():
         reader = easyocr.Reader(['tr'])
         result = reader.readtext(IMAGE_PATH,paragraph="False")
         print (result) 
+        if len(result)>0:
+            return result[0][1]
+        else:
+            return None
 
     def dataMatrix_Verification(self,stage):
         print("Data Matrix Verification")

@@ -34,13 +34,22 @@ class ProcessModule():
             
             # Seri No 1 Araması
             self.application.websocket_module.send_message_to_all("seriNo1-text")
-            self.application.camera.seri_no_1_verification(1)
+            data = self.application.camera.seri_no_1_verification(1)
+            self.application.websocket_module.send_message_to_all("seriNo1-result",data)
+            self.application.websocket_module.send_message_to_all("seriNo1-img")
+            
 
             # Seri No 2 Araması
-            self.application.camera.seri_no_2_verification(1)
+            self.application.websocket_module.send_message_to_all("seriNo2-text")
+            data = self.application.camera.seri_no_2_verification(1)
+            self.application.websocket_module.send_message_to_all("seriNo2-result",data)
+            self.application.websocket_module.send_message_to_all("seriNo2-img")
 
             # Seri No 3 Araması
-            self.application.camera.seri_no_3_verification(1)
+            self.application.websocket_module.send_message_to_all("seriNo3-text")
+            data = self.application.camera.seri_no_3_verification(1)
+            self.application.websocket_module.send_message_to_all("seriNo3-result",data)
+            self.application.websocket_module.send_message_to_all("seriNo3-img")
 
 
 
