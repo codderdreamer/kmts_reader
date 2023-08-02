@@ -8,17 +8,18 @@ class ProcessModule():
         self.simu = False
 
     def run(self):
+        if self.application.modbus.open_white_led():
+            self.application.websocket_module.send_message_to_all("white-led-text-1","Beyaz Led Yakıldı.")
+        else:
+            self.application.websocket_module.send_message_to_all("white-led-text-1","Beyaz Led Yakılamadı!")
+            return False
+        time.sleep(1)
+
         while True:
             print("Running...")
-            if self.application.modbus.open_white_led():
-                self.application.websocket_module.send_message_to_all("white-led-text-1","Beyaz Led Yakıldı.")
-            else:
-                self.application.websocket_module.send_message_to_all("white-led-text-1","Beyaz Led Yakılamadı!")
-                return False
-            time.sleep(2)
-
             # 1. örnek için renkli kameradan renkli görüntüyü al
             if self.application.camera.save_colourful_image(1):
+                self.application.websocket_module.send_message_to_all("colourful-img-1")
                 self.application.websocket_module.send_message_to_all("colourful-img-1")
             else:
                 self.application.websocket_module.send_message_to_all("colourful-text-1","Renkli kamera görüntüsü alınamadı!")
