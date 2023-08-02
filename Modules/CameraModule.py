@@ -329,6 +329,8 @@ class CameraModule():
 
         image_original = self.cut_colourful_image_digimark(image_original)
 
+        image_original = self.image_rotate_clockwise(image_original,1)
+
         cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'digimark.png',image_original)
 
 
