@@ -42,5 +42,16 @@ h1{
     background-color: rgb(184, 184, 184);
     padding-top: 10px;
     padding-left: 20px;
-    
+
+}
+
+.image{
+    width: 200px;
+    height: auto;
+}
+
+.column{
+    display: inline-block;
+    width: 250px;
+    height: auto;
 }
