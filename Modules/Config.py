@@ -88,7 +88,7 @@ class Config():
         self.camera.colourful.seriNoPoints3.right_bottom_x = int(data["camera"]["colourful"]["seriNoPoints3"]["right_bottom_x"])
         self.camera.colourful.seriNoPoints3.right_bottom_y = int(data["camera"]["colourful"]["seriNoPoints3"]["right_bottom_y"])
 
-        self.camera.colourful.resolution_digimarkCode = int(data["camera"]["colourful"]["resolution_digimarkCode"])
+        self.camera.colourful.resolution_seriNo_3 = int(data["camera"]["colourful"]["resolution_seriNo_3"])
 
 
         # digimark code
@@ -101,7 +101,7 @@ class Config():
         self.camera.colourful.digimarkCodePoints.right_bottom_x = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_bottom_x"])
         self.camera.colourful.digimarkCodePoints.right_bottom_y = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_bottom_y"])
 
-        self.camera.colourful.resolution_datamatrix = int(data["camera"]["colourful"]["resolution_datamatrix"])
+        self.camera.colourful.resolution_digimarkCode = int(data["camera"]["colourful"]["resolution_digimarkCode"])
 
 
         # modbus port
