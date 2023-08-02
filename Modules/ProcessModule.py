@@ -50,12 +50,5 @@ class ProcessModule():
             data = self.application.camera.seri_no_3_verification(1)
             self.application.websocket_module.send_message_to_all("seriNo3-result",data)
             self.application.websocket_module.send_message_to_all("seriNo3-img")
-
-
-
             print(" while döngüsü başa dönüyor")
-
-
-
-
-        time.sleep(1)
+            time.sleep(2)
