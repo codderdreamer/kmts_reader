@@ -28,7 +28,7 @@ class ProcessModule():
             self.application.camera.dataMatrix_verification(1)
 
             # Seri No 1 Araması
-            self.application.seri_no_1_verification(1)
+            self.application.camera.seri_no_1_verification(1)
 
             print(" while döngüsü başa dönüyor")
 
