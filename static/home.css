@@ -279,7 +279,7 @@ h1{
 
 #section-1-div{
     position: absolute;
-    width: 25%;
+    width: 50%;
     height: 800px;
     background-color: rgb(85, 85, 85);
     display: inline-block;
@@ -328,7 +328,7 @@ h1{
 #section-2-div{
     position: absolute;
     left: 25%;
-    width: 25%;
+    width: 50%;
     height: 800px;
     background-color: rgb(85, 85, 85);
     display: inline-block;
