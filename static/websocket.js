@@ -34,7 +34,9 @@ function connect(){
     {
         incomingData = JSON.parse( e.data );
         console.log(incomingData)
-        if (incomingData.Command == "colourful-img-1") {
+        if ( incomingData.Command == "Clear" ) {
+            document.getElementById("section-1").innerHTML = ""
+        } else if (incomingData.Command == "colourful-img-1") {
             createImage('colourful-img-1',"../static/assets/test_1/1/colourful.png","section-1")
         }
 

@@ -17,9 +17,9 @@ class ProcessModule():
 
         while True:
             print("Running...")
+            self.application.websocket_module.send_message_to_all("Clear")
             # 1. örnek için renkli kameradan renkli görüntüyü al
             if self.application.camera.save_colourful_image(1):
-                self.application.websocket_module.send_message_to_all("colourful-img-1")
                 self.application.websocket_module.send_message_to_all("colourful-img-1")
             else:
                 self.application.websocket_module.send_message_to_all("colourful-text-1","Renkli kamera görüntüsü alınamadı!")
