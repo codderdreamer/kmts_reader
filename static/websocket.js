@@ -49,6 +49,10 @@ function connect(){
             document.getElementById("seriNo3-text").innerHTML = ""
             document.getElementById("seriNo3-result").innerHTML = ""
             document.getElementById("seriNo3-img").src = ""
+
+            document.getElementById("seriNo1-result").className = ""
+            document.getElementById("seriNo2-result").className = ""
+            document.getElementById("seriNo3-result").className = ""
             
         } else if (incomingData.Command == "colourful-img-text") {
             document.getElementById("colourful-img-text").innerHTML = "Renkli görüntü alınıyor..."
