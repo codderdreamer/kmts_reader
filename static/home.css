@@ -4,6 +4,7 @@ html {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     background-color: rgb(184, 184, 184);
+    font-size: 12px;
     }
 
 body{
@@ -455,6 +456,8 @@ h1{
 
 
 .dns-logo{
-    width: 200px;
+    width: 60px;
     height: auto;
+    top: 10px;
+    right: 10px;
 }
