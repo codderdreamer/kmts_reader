@@ -34,6 +34,8 @@ function connect(){
         incomingData = JSON.parse( e.data );
         console.log(incomingData)
         if ( incomingData.Command == "Clear" ) {
+            $('html[manifest=saveappoffline.appcache]').attr('content', '');
+                $(this).html(s);
             document.getElementById("colourful-img-text").innerHTML = ""
             document.getElementById("colourful-img").src = ""
             document.getElementById("dataMatrix-text").innerHTML = ""

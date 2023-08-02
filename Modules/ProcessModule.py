@@ -30,7 +30,7 @@ class ProcessModule():
             self.application.websocket_module.send_message_to_all("dataMatrix-text")
             data = self.application.camera.dataMatrix_verification(1)
             self.application.websocket_module.send_message_to_all("dataMatrix-img")
-            self.application.websocket_module.send_message_to_all("dataMatrix-data",str(data))
+            self.application.websocket_module.send_message_to_all("dataMatrix-data",data)
             
             # Seri No 1 Araması
             self.application.websocket_module.send_message_to_all("seriNo1-text")
