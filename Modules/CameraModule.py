@@ -101,7 +101,7 @@ class CameraModule():
         y4 = int(self.application.config.camera.colourful.resolution_seriNo_1)
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
     
-    def cut_colourful_image_seriNo_1(self,stage):
+    def cut_colourful_image_seriNo_1(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_seriNo_1_points(),self.get_colourful_seriNo_1_resolution_points())
         frame = cv2.warpPerspective(frame,matrix,(int(self.application.config.camera.colourful.resolution_seriNo_1),int(self.application.config.camera.colourful.resolution_seriNo_1)))
         return frame
