@@ -43,17 +43,17 @@
             },
 
             "seriNoPoints1" : {
-                "left_top_x" : 555,
-                "left_top_y" : 400,
+                "left_top_x" : 400,
+                "left_top_y" : 620,
 
-                "left_bottom_x" : 555,
-                "left_bottom_y" : 530,
+                "left_bottom_x" : 400,
+                "left_bottom_y" : 880,
 
-                "right_top_x" : 685,
-                "right_top_y" : 400,
+                "right_top_x" : 660,
+                "right_top_y" : 620,
 
-                "right_bottom_x" : 685,
-                "right_bottom_y" : 530
+                "right_bottom_x" : 660,
+                "right_bottom_y" : 880
             },
 
             "seriNoPoints2" : {
@@ -99,6 +99,17 @@
             }, 
 
             "resolution" : 130,
+
+            "resolution_datamatrix" : 130,
+
+            "resolution_seriNo_1" : 260,
+
+            "resolution_seriNo_2" : 130,
+
+            "resolution_seriNo_3" : 130,
+
+            "resolution_digimarkCode" : 130,
+
             "rotation_clockwise_counter" : 1,
             "threshold" : 0.5
         }

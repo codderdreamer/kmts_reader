@@ -8,6 +8,10 @@ import os
 from pyzbar.pyzbar import decode
 from pylibdmtx import pylibdmtx
 import math
+import os
+import easyocr
+import cv2
+from matplotlib import pyplot as plt
 
 class CameraModule():
     def __init__(self,application):
@@ -45,7 +49,9 @@ class CameraModule():
 
         self.datamatrix_readed = False
 
-    def get_colourful_points(self):
+
+# Data Matrix Cutting
+    def get_colourful_dataMatrix_points(self):
         x1 = int(self.application.config.camera.colourful.dataMatrixPoints.left_top_x)
         y1 = int(self.application.config.camera.colourful.dataMatrixPoints.left_top_y)
         x2 = int(self.application.config.camera.colourful.dataMatrixPoints.left_bottom_x)
@@ -56,22 +62,51 @@ class CameraModule():
         y4 = int(self.application.config.camera.colourful.dataMatrixPoints.right_bottom_y)
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
     
-    def get_colourful_resolution_points(self):
+    def get_colourful_dataMatrix_resolution_points(self):
         x1 = 0
         y1 = 0
         x2 = 0
-        y2 = int(self.application.config.camera.colourful.resolution)
-        x3 = int(self.application.config.camera.colourful.resolution)
+        y2 = int(self.application.config.camera.colourful.resolution_datamatrix)
+        x3 = int(self.application.config.camera.colourful.resolution_datamatrix)
         y3 = 0
-        x4 = int(self.application.config.camera.colourful.resolution)
-        y4 = int(self.application.config.camera.colourful.resolution)
+        x4 = int(self.application.config.camera.colourful.resolution_datamatrix)
+        y4 = int(self.application.config.camera.colourful.resolution_datamatrix)
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
     
     def cut_colourful_image_dataMatrix(self,frame):
-        matrix = cv2.getPerspectiveTransform(self.get_colourful_points(),self.get_colourful_resolution_points())
-        frame = cv2.warpPerspective(frame,matrix,(int(self.application.config.camera.colourful.resolution),int(self.application.config.camera.colourful.resolution)))
+        matrix = cv2.getPerspectiveTransform(self.get_colourful_dataMatrix_points(),self.get_colourful_dataMatrix_resolution_points())
+        frame = cv2.warpPerspective(frame,matrix,(int(self.application.config.camera.colourful.resolution_datamatrix),int(self.application.config.camera.colourful.resolution_datamatrix)))
         return frame
     
+# Seri No 1 Cutting
+    def get_colourful_seriNo_1_points(self):
+        x1 = int(self.application.config.camera.colourful.seriNoPoints1.left_top_x)
+        y1 = int(self.application.config.camera.colourful.seriNoPoints1.left_top_y)
+        x2 = int(self.application.config.camera.colourful.seriNoPoints1.left_bottom_x)
+        y2 = int(self.application.config.camera.colourful.seriNoPoints1.left_bottom_y)
+        x3 = int(self.application.config.camera.colourful.seriNoPoints1.right_top_x)
+        y3 = int(self.application.config.camera.colourful.seriNoPoints1.right_top_y)
+        x4 = int(self.application.config.camera.colourful.seriNoPoints1.right_bottom_x)
+        y4 = int(self.application.config.camera.colourful.seriNoPoints1.right_bottom_y)
+        return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
+    
+    def get_colourful_seriNo_1_resolution_points(self):
+        x1 = 0
+        y1 = 0
+        x2 = 0
+        y2 = int(self.application.config.camera.colourful.resolution_seriNo_1)
+        x3 = int(self.application.config.camera.colourful.resolution_seriNo_1)
+        y3 = 0
+        x4 = int(self.application.config.camera.colourful.resolution_seriNo_1)
+        y4 = int(self.application.config.camera.colourful.resolution_seriNo_1)
+        return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
+    
+    def cut_colourful_image_seriNo_1(self,stage):
+        matrix = cv2.getPerspectiveTransform(self.get_colourful_seriNo_1_points(),self.get_colourful_seriNo_1_resolution_points())
+        frame = cv2.warpPerspective(frame,matrix,(int(self.application.config.camera.colourful.resolution_seriNo_1),int(self.application.config.camera.colourful.resolution_seriNo_1)))
+        return frame
+    
+
     def image_rotate_clockwise(self,frame,counter):
         if counter != 0:
             for i in range(0,counter):
@@ -139,40 +174,36 @@ class CameraModule():
 
         image_original = self.cut_colourful_image_dataMatrix(image_original)
 
-        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'cutting.png',image_original)
-
+        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'dataMatrix.png',image_original)
 
         image_original = 255 - image_original
 
-        data_matrix_finded = False
         threshold_counter = 0.5
 
-        
-
-        
-
         _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
-        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'thresh.png',threshold)
+        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'dataMatrixThresh.png',threshold)
         data = pylibdmtx.decode(threshold)
         finish = time.time()
         print("Decode edilme:", finish-start)
         print(data)
 
-        # while data_matrix_finded == False:
-        #     print("Deneniyor threshold_counter:",threshold_counter )
-        #     if threshold_counter > 1:
-        #         print("İşlem sonlandı. Data matrix bulunamadı. Ththreshold_counter 1")
-        #         break
-            
-        #     _, threshold = cv2.threshold(image_original, np.max(image_original)*threshold_counter, 256, cv2.THRESH_BINARY)
-        #     data = pylibdmtx.decode(threshold)
-        #     if len(data) != 0:
-        #         print("******** Data bulundu: ", data)
-        #         data_matrix_finded = True
-        #     else:
-        #         print("threshold_counter: ",threshold_counter, " Bulunamadı.")
-            
-        #     threshold_counter = threshold_counter + 0.1
+    def seri_no_1_verification(self,stage):
+        print("Seri No Verification")
+        start = time.time()
+        image_original = cv2.imread(self.application.test_1_file_path + str(stage) + '/' + 'colourful.png')
 
-        #     time.sleep(1)
+        image_original = self.cut_colourful_image_seriNo_1(image_original)
+
+        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'seriNo1.png',image_original)
+
+        # Changing the image path
+        IMAGE_PATH = self.application.test_1_file_path + str(stage) + '/' + 'seriNo1.png'
+        # Same code here just changing the attribute from ['en'] to ['zh']
+        reader = easyocr.Reader(['tr'])
+        result = reader.readtext(IMAGE_PATH,paragraph="False")
+        print (result)
+
+
+
+
         

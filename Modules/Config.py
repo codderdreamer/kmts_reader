@@ -38,7 +38,6 @@ class Config():
         self.camera.infrared.threshold = float(data["camera"]["infrared"]["threshold"])
         # colourful
         self.camera.colourful.exposure = int(data["camera"]["colourful"]["exposure"])
-        self.camera.colourful.resolution = int(data["camera"]["colourful"]["resolution"])
         self.camera.colourful.rotation_clockwise_counter = int(data["camera"]["colourful"]["rotation_clockwise_counter"])
         self.camera.colourful.threshold = float(data["camera"]["colourful"]["threshold"])
 
@@ -52,6 +51,8 @@ class Config():
         self.camera.colourful.dataMatrixPoints.right_bottom_x = int(data["camera"]["colourful"]["dataMatrixPoints"]["right_bottom_x"])
         self.camera.colourful.dataMatrixPoints.right_bottom_y = int(data["camera"]["colourful"]["dataMatrixPoints"]["right_bottom_y"])
 
+        self.camera.colourful.resolution_datamatrix = int(data["camera"]["colourful"]["resolution_datamatrix"])
+
         # seri no 1 ( üst bölge )
         self.camera.colourful.seriNoPoints1.left_top_x = int(data["camera"]["colourful"]["seriNoPoints1"]["left_top_x"])
         self.camera.colourful.seriNoPoints1.left_top_y = int(data["camera"]["colourful"]["seriNoPoints1"]["left_top_y"])
@@ -62,6 +63,8 @@ class Config():
         self.camera.colourful.seriNoPoints1.right_bottom_x = int(data["camera"]["colourful"]["seriNoPoints1"]["right_bottom_x"])
         self.camera.colourful.seriNoPoints1.right_bottom_y = int(data["camera"]["colourful"]["seriNoPoints1"]["right_bottom_y"])
 
+        self.camera.colourful.resolution_seriNo_1 = int(data["camera"]["colourful"]["resolution_seriNo_1"])
+
         # seri no 2 ( orta altının olduğu yerdeki bölge )
         self.camera.colourful.seriNoPoints2.left_top_x = int(data["camera"]["colourful"]["seriNoPoints2"]["left_top_x"])
         self.camera.colourful.seriNoPoints2.left_top_y = int(data["camera"]["colourful"]["seriNoPoints2"]["left_top_y"])
@@ -71,6 +74,8 @@ class Config():
         self.camera.colourful.seriNoPoints2.right_top_y = int(data["camera"]["colourful"]["seriNoPoints2"]["right_top_y"])
         self.camera.colourful.seriNoPoints2.right_bottom_x = int(data["camera"]["colourful"]["seriNoPoints2"]["right_bottom_x"])
         self.camera.colourful.seriNoPoints2.right_bottom_y = int(data["camera"]["colourful"]["seriNoPoints2"]["right_bottom_y"])
+
+        self.camera.colourful.resolution_seriNo_2 = int(data["camera"]["colourful"]["resolution_seriNo_2"])
 
 
         # seri no 3 (yatayda sağdaki bölge )
@@ -83,6 +88,8 @@ class Config():
         self.camera.colourful.seriNoPoints3.right_bottom_x = int(data["camera"]["colourful"]["seriNoPoints3"]["right_bottom_x"])
         self.camera.colourful.seriNoPoints3.right_bottom_y = int(data["camera"]["colourful"]["seriNoPoints3"]["right_bottom_y"])
 
+        self.camera.colourful.resolution_digimarkCode = int(data["camera"]["colourful"]["resolution_digimarkCode"])
+
 
         # digimark code
         self.camera.colourful.digimarkCodePoints.left_top_x = int(data["camera"]["colourful"]["digimarkCodePoints"]["left_top_x"])
@@ -93,6 +100,8 @@ class Config():
         self.camera.colourful.digimarkCodePoints.right_top_y = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_top_y"])
         self.camera.colourful.digimarkCodePoints.right_bottom_x = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_bottom_x"])
         self.camera.colourful.digimarkCodePoints.right_bottom_y = int(data["camera"]["colourful"]["digimarkCodePoints"]["right_bottom_y"])
+
+        self.camera.colourful.resolution_datamatrix = int(data["camera"]["colourful"]["resolution_datamatrix"])
 
 
         # modbus port
@@ -124,7 +133,12 @@ class Image():
         self.digimarkCodePoints = Points()
         self.exposure = None
         self.resolution = None
+        self.resolution_datamatrix = None
+        self.resolution_seriNo_1 = None
+        self.resolution_seriNo_2 = None
+        self.resolution_seriNo_3 = None
         self.rotation_clockwise_counter = None
+        self.resolution_digimarkCode = None
         self.threshold = None
 
 
