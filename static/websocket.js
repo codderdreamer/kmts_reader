@@ -60,7 +60,7 @@ function connect(){
         } else if (incomingData.Command == "dataMatrix-text") {
             document.getElementById("dataMatrix-text").innerHTML = "Data matrix bulunuyor ..."
         } else if (incomingData.Command == "dataMatrix-img") {
-            document.getElementById("dataMatrix-img").src = "../static/assets/test_1/1/dataMatrix.png"
+            document.getElementById("dataMatrix-img").src = "../static/assets/test_1/1/dataMatrix.png?" + Math.random();
         } else if (incomingData.Command == "dataMatrix-data") {
             if(incomingData.Data=="" || incomingData.Data==null){
                 document.getElementById("dataMatrix-data").className = "false-data"
@@ -78,7 +78,7 @@ function connect(){
             }
             document.getElementById("seriNo1-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo1-img") {
-            document.getElementById("seriNo1-img").src = "../static/assets/test_1/1/seriNo1.png"
+            document.getElementById("seriNo1-img").src = "../static/assets/test_1/1/seriNo1.png?" + Math.random();
         } else if (incomingData.Command == "seriNo2-text") {
             document.getElementById("seriNo2-text").innerHTML = "Altın üzerindeki 2. Seri numarası bulunuyor..."
         } else if (incomingData.Command == "seriNo2-result") {
@@ -89,7 +89,7 @@ function connect(){
             }
             document.getElementById("seriNo2-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo2-img") {
-            document.getElementById("seriNo2-img").src = "../static/assets/test_1/1/seriNo2.png"
+            document.getElementById("seriNo2-img").src = "../static/assets/test_1/1/seriNo2.png?" + Math.random();
         } else if (incomingData.Command == "seriNo3-text") {
             document.getElementById("seriNo3-text").innerHTML = "Altın üzerindeki 3. Seri numarası bulunuyor..."
         } else if (incomingData.Command == "seriNo3-result") {
@@ -100,7 +100,7 @@ function connect(){
             }
             document.getElementById("seriNo3-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo3-img") {
-            document.getElementById("seriNo3-img").src = "../static/assets/test_1/1/seriNo3.png"
+            document.getElementById("seriNo3-img").src = "../static/assets/test_1/1/seriNo3.png?" + Math.random();
         }
 
 
