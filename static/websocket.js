@@ -2,6 +2,7 @@
 // var ws = new WebSocket( "ws://192.168.1.139:9000" );
 var ws = new WebSocket( "ws://" + document.location.hostname + ":9000");
 
+var digimark = ""
 
 function createText(textid,whichSectionId){
     var template = document.getElementById('text-template')
@@ -84,6 +85,7 @@ function connect(){
             } else {
                 document.getElementById("seriNo1-result").className = "true-data"
             }
+            digimark= incomingData.Data
             document.getElementById("seriNo1-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo1-img") {
             document.getElementById("seriNo1-img").src = "../static/assets/test_1/1/seriNo1.png?" + Math.random();
@@ -113,7 +115,7 @@ function connect(){
             document.getElementById("digimark-text").innerHTML = "Altın üzerindeki Digimark kodu bulunuyor..."
         } else if (incomingData.Command == "digimark-img") {
             document.getElementById("digimark-img").src = "../static/assets/test_1/1/digimark.png?" + Math.random();
-            document.getElementById("digimark-result").innerHTML = "Bulunan digimark kodu : " + "ATLASTEK123"
+            document.getElementById("digimark-result").innerHTML = "Bulunan digimark kodu : " + digimark
             document.getElementById("digimark-result").className = "true-data"
         } else if (incomingData.Command == "ink-text") {
             document.getElementById("ink-text").innerHTML = "Altın Üzerindeki Mürekkep değerlerine bakılıyor..."
