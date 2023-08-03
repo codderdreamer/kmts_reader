@@ -255,7 +255,7 @@ class CameraModule():
             if success:
                 self.colourful_counter = 0
                 frame = self.image_rotate_clockwise(frame,self.application.config.camera.colourful.rotation_clockwise_counter)
-                self.cut_colourful_image(frame)
+                frame = self.cut_colourful_image(frame)
                 cv2.imwrite( self.application.test_1_file_path + str(stage) + '/' +  'colourful.png', frame)
                 return True
             else:
