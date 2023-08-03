@@ -61,6 +61,7 @@ class ProcessModule():
             print("************************* Digimark Araması *************************")
             self.application.websocket_module.send_message_to_all("digimark-text")
             self.application.camera.dataMatrix_Verification(1)
+            time.sleep(3)
             self.application.websocket_module.send_message_to_all("digimark-img")
 
             # Mürekkep Araması
