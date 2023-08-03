@@ -112,12 +112,17 @@ function connect(){
             document.getElementById("digimark-img").src = "../static/assets/test_1/1/digimark.png?" + Math.random();
             document.getElementById("digimark-result").innerHTML = "Bulunan digimark kodu : " + "ATLASTEK123"
             document.getElementById("digimark-result").className = "true-data"
-        } 
+        } else if (incomingData.Command == "ink-text") {
+            document.getElementById("ink-text").innerHTML = "Altın Üzerindeki Mürekkep değerlerine bakılıyor..."
+        } else if (incomingData.Command == "ink-result") {
+            document.getElementById("ink-result").innerHTML = incomingData.Data
+        }
+        
 
         
         
 
-
+        
 
 
         
