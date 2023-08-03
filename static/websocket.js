@@ -58,6 +58,8 @@ function connect(){
             document.getElementById("seriNo3-result").className = ""
             document.getElementById("digimark-result").className = ""
             document.getElementById("ink-result").innerHTML = ""
+            document.getElementById(" result-img").src = ""
+           
 
         } else if (incomingData.Command == "colourful-img-text") {
             document.getElementById("colourful-img-text").innerHTML = "Renkli görüntü alınıyor..."
