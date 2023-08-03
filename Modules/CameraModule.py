@@ -149,17 +149,17 @@ class CameraModule():
         x1 = 0
         y1 = 0
         x2 = 0
-        y2 = 80
-        x3 = 280
+        y2 = 70
+        x3 = 245
         y3 = 0
-        x4 = 280
-        y4 = 80
+        x4 = 245
+        y4 = 70
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
 
 
     def cut_colourful_image_seriNo_2(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_seriNo_2_points(),self.get_colourful_seriNo_2_resolution_points())
-        frame = cv2.warpPerspective(frame,matrix,(280,80))
+        frame = cv2.warpPerspective(frame,matrix,(245,70))
         return frame
     
 # Seri No 3 Cutting
@@ -178,17 +178,17 @@ class CameraModule():
         x1 = 0
         y1 = 0
         x2 = 0
-        y2 = int(self.application.config.camera.colourful.resolution_seriNo_3)
-        x3 = int(self.application.config.camera.colourful.resolution_seriNo_3)
+        y2 = 215
+        x3 = 70
         y3 = 0
-        x4 = int(self.application.config.camera.colourful.resolution_seriNo_3)
-        y4 = int(self.application.config.camera.colourful.resolution_seriNo_3)
+        x4 = 70
+        y4 = 215
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
 
 
     def cut_colourful_image_seriNo_3(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_seriNo_3_points(),self.get_colourful_seriNo_3_resolution_points())
-        frame = cv2.warpPerspective(frame,matrix,(int(self.application.config.camera.colourful.resolution_seriNo_3),int(self.application.config.camera.colourful.resolution_seriNo_3)))
+        frame = cv2.warpPerspective(frame,matrix,(70,215))
         return frame
     
 # Digimark Cutting
@@ -207,17 +207,17 @@ class CameraModule():
         x1 = 0
         y1 = 0
         x2 = 0
-        y2 = int(self.application.config.camera.colourful.resolution_digimarkCode)
-        x3 = int(self.application.config.camera.colourful.resolution_digimarkCode)
+        y2 = 215
+        x3 = 220
         y3 = 0
-        x4 = int(self.application.config.camera.colourful.resolution_digimarkCode)
-        y4 = int(self.application.config.camera.colourful.resolution_digimarkCode)
+        x4 = 220
+        y4 = 215
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
 
 
     def cut_colourful_image_digimark(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_digimark_points(),self.get_colourful_digimark_resolution_points())
-        frame = cv2.warpPerspective(frame,matrix,(int(self.application.config.camera.colourful.resolution_digimarkCode),int(self.application.config.camera.colourful.resolution_digimarkCode)))
+        frame = cv2.warpPerspective(frame,matrix,(220,215))
         return frame
 
 

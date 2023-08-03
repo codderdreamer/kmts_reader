@@ -71,45 +71,45 @@
             },
 
             "seriNoPoints2" : {
-                "left_top_x" : 315,
-                "left_top_y" : 1600,
+                "left_top_x" : 180,
+                "left_top_y" : 950,
 
-                "left_bottom_x" : 315,
-                "left_bottom_y" : 1680,
+                "left_bottom_x" : 180,
+                "left_bottom_y" : 1020,
 
-                "right_top_x" : 595,
-                "right_top_y" : 1600,
+                "right_top_x" : 480,
+                "right_top_y" : 950,
 
-                "right_bottom_x" : 595,
-                "right_bottom_y" : 1680
+                "right_bottom_x" : 480,
+                "right_bottom_y" : 1020
             }, 
 
             "seriNoPoints3" : {
-                "left_top_x" : 780,
-                "left_top_y" : 780,
+                "left_top_x" : 510,
+                "left_top_y" : 75,
 
-                "left_bottom_x" : 780,
-                "left_bottom_y" : 1050,
+                "left_bottom_x" : 510,
+                "left_bottom_y" : 290,
 
-                "right_top_x" : 1050,
-                "right_top_y" : 780,
+                "right_top_x" : 580,
+                "right_top_y" : 75,
 
-                "right_bottom_x" : 1050,
-                "right_bottom_y" : 1050
+                "right_bottom_x" : 580,
+                "right_bottom_y" : 290
             }, 
 
             "digimarkCodePoints" : {
-                "left_top_x" : 630,
-                "left_top_y" : 630,
+                "left_top_x" : 360,
+                "left_top_y" : 75,
 
-                "left_bottom_x" : 630,
-                "left_bottom_y" : 800,
+                "left_bottom_x" : 360,
+                "left_bottom_y" : 290,
 
-                "right_top_x" : 800,
-                "right_top_y" : 630,
+                "right_top_x" : 580,
+                "right_top_y" : 75,
 
-                "right_bottom_x" : 800,
-                "right_bottom_y" : 800
+                "right_bottom_x" : 580,
+                "right_bottom_y" : 290
             }, 
 
             "resolution" : 130,
