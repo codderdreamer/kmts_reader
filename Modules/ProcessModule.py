@@ -84,4 +84,4 @@ class ProcessModule():
 
 
             print(" while döngüsü başa dönüyor")
-            time.sleep(2)
+            time.sleep(5)
