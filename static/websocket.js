@@ -51,12 +51,13 @@ function connect(){
             document.getElementById("digimark-result").innerHTML = ""
             document.getElementById("digimark-img").src = ""
             document.getElementById("digimark-text").innerHTML = ""
-
+            document.getElementById("ink-text").innerHTML = ""
             document.getElementById("dataMatrix-result").className = ""
             document.getElementById("seriNo1-result").className = ""
             document.getElementById("seriNo2-result").className = ""
             document.getElementById("seriNo3-result").className = ""
             document.getElementById("digimark-result").className = ""
+            document.getElementById("ink-result").innerHTML = ""
 
         } else if (incomingData.Command == "colourful-img-text") {
             document.getElementById("colourful-img-text").innerHTML = "Renkli görüntü alınıyor..."
