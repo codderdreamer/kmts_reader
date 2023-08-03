@@ -38,7 +38,7 @@ function connect(){
             document.getElementById("colourful-img").src = ""
             document.getElementById("dataMatrix-text").innerHTML = ""
             document.getElementById("dataMatrix-img").src = ""
-            document.getElementById("dataMatrix-data").innerHTML = ""
+            document.getElementById("dataMatrix-result").innerHTML = ""
             document.getElementById("seriNo1-text").innerHTML = ""
             document.getElementById("seriNo1-result").innerHTML = ""
             document.getElementById("seriNo1-img").src = ""
@@ -48,11 +48,16 @@ function connect(){
             document.getElementById("seriNo3-text").innerHTML = ""
             document.getElementById("seriNo3-result").innerHTML = ""
             document.getElementById("seriNo3-img").src = ""
+            document.getElementById("digimark-result").innerHTML = ""
+            document.getElementById("digimark-img").src = ""
+            document.getElementById("digimark-text").innerHTML = ""
 
+            document.getElementById("dataMatrix-result").className = ""
             document.getElementById("seriNo1-result").className = ""
             document.getElementById("seriNo2-result").className = ""
             document.getElementById("seriNo3-result").className = ""
-            
+            document.getElementById("digimark-result").className = ""
+
         } else if (incomingData.Command == "colourful-img-text") {
             document.getElementById("colourful-img-text").innerHTML = "Renkli görüntü alınıyor..."
         } else if (incomingData.Command == "colourful-img") {
@@ -61,13 +66,13 @@ function connect(){
             document.getElementById("dataMatrix-text").innerHTML = "Data matrix bulunuyor ..."
         } else if (incomingData.Command == "dataMatrix-img") {
             document.getElementById("dataMatrix-img").src = "../static/assets/test_1/1/dataMatrix.png?" + Math.random();
-        } else if (incomingData.Command == "dataMatrix-data") {
+        } else if (incomingData.Command == "dataMatrix-result") {
             if(incomingData.Data=="" || incomingData.Data==null){
-                document.getElementById("dataMatrix-data").className = "false-data"
+                document.getElementById("dataMatrix-result").className = "false-data"
             } else {
-                document.getElementById("dataMatrix-data").className = "true-data"
+                document.getElementById("dataMatrix-result").className = "true-data"
             }
-            document.getElementById("dataMatrix-data").innerHTML = "Data matrix : " + incomingData.Data
+            document.getElementById("dataMatrix-result").innerHTML = "Data matrix : " + incomingData.Data
         } else if (incomingData.Command == "seriNo1-text") {
             document.getElementById("seriNo1-text").innerHTML = "Altın üzerindeki 1. Seri numarası bulunuyor..."
         } else if (incomingData.Command == "seriNo1-result") {
@@ -101,217 +106,21 @@ function connect(){
             document.getElementById("seriNo3-result").innerHTML = "Bulunan seri no : " + incomingData.Data
         } else if (incomingData.Command == "seriNo3-img") {
             document.getElementById("seriNo3-img").src = "../static/assets/test_1/1/seriNo3.png?" + Math.random();
-        }
+        } else if (incomingData.Command == "digimark-text") {
+            document.getElementById("digimark-text").innerHTML = "Altın üzerindeki Digimark kodu bulunuyor..."
+        } else if (incomingData.Command == "digimark-img") {
+            document.getElementById("digimark-img").src = "../static/assets/test_1/1/digimark.png?" + Math.random();
+            document.getElementById("digimark-result").innerHTML = "Bulunan digimark kodu : " + "ATLASTEK123"
+            document.getElementById("digimark-result").className = "true-data"
+        } 
 
-
-
-
-        // if (incomingData.Command == "Infrared Camera") {
-        //     if (incomingData.Data == "Opened"){
-        //         document.getElementById("ir-camera-icon").style.backgroundColor = "rgb(81, 220, 111)"
-        //     }
-        //     else if (incomingData.Data == "Closed"){
-        //         document.getElementById("ir-camera-icon").style.backgroundColor = "rgb(255, 68, 68)"
-        //     }
-        // }
-        // else if (incomingData.Command == "Colourful Camera"){
-        //     if (incomingData.Data == "Opened"){
-        //         document.getElementById("colourful-camera-icon").style.backgroundColor = "rgb(81, 220, 111)"
-        //     }
-        //     else if (incomingData.Data == "Closed"){
-        //         document.getElementById("colourful-camera-icon").style.backgroundColor = "rgb(255, 68, 68)"
-        //     }
-        // }
-        // else if (incomingData.Command == "Modbus"){
-        //     if (incomingData.Data == "Opened"){
-        //         document.getElementById("usb-icon").style.backgroundColor = "rgb(81, 220, 111)"
-        //     }
-        //     else if (incomingData.Data == "Closed"){
-        //         document.getElementById("usb-icon").style.backgroundColor = "rgb(255, 68, 68)"
-        //     }
-        // }
-        // else if (incomingData.Command == "Start"){
-        //     document.getElementById("request_date").value = incomingData.Data.request_date
-        //     document.getElementById("planned_printing_date").value = incomingData.Data.planned_printing_date
-        //     document.getElementById("sample_report_serial_number").value = incomingData.Data.sample_report_serial_number
-        //     document.getElementById("sample_location").value = incomingData.Data.sample_location
-        //     document.getElementById("startbutton").style.backgroundColor = "red"
-        //     document.getElementById("startbutton").disabled = true
-        // }
-        // // ******************** 1. aşama *********************************
-        // else if (incomingData.Command == "white-led-text-1"){
-        //     //sayfayı temizle
-        //     document.getElementById("section-1").innerHTML=""
-        //     document.getElementById("section-2").innerHTML=""
-        //     document.getElementById("section-3").innerHTML=""
-        //     document.getElementById("section-4").innerHTML=""
-        //     createText("white-led-text-1","section-1")
-        // }
-        // else if (incomingData.Command == "colourful-img-1"){
-        //     createImage('colourful-img-1',"../static/assets/test_1/1/colourful.png","section-1")
-        // }
-        // else if (incomingData.Command == "colourful-text-1"){
-        //     createText("colourful-text-1","section-1")
         
-        // }
-        // else if (incomingData.Command == "green-text-1"){
-        //     createText("green-text-1","section-1")
-        // }
-        // else if (incomingData.Command == "green-text-result-1"){
-        //     createText("green-text-result-1","section-1")
-        // }
-        // else if (incomingData.Command == "blue-text-1"){
-        //     createText("blue-text-1","section-1")
-        // }
-        // else if (incomingData.Command == "ir-camera-text-1"){
-        //     createText("ir-camera-text-1","section-1")
-        // }
-        // else if (incomingData.Command == "original-img-1"){
-        //     createImage("original-img-1","../static/assets/test_1/1/original_image.png","section-1")
-        // }
-        // else if (incomingData.Command ==  "original-text-1"){
-        //     createText("original-text-1","section-1")
-        // }
-        // else if (incomingData.Command ==  "barcode-text-1"){
-        //     createText("barcode-text-1","section-1")
-        // }
-        // else if (incomingData.Command == "barcode-img-1"){
-        //     createImage("barcode-img-1","../static/assets/test_1/1/barcode_image.png","section-1")
-        // }
-        // else if (incomingData.Command ==  "barcode-text-result-1"){
-        //     createText("barcode-text-result-1","section-1")
-        // }
-        // else if (incomingData.Command ==  "logo-verification-text-1"){
-        //     createText("logo-verification-text-1","section-1")
-        // }
-        // else if (incomingData.Command == "logo-img-1"){
-        //     createImage("logo-img-1","../static/assets/test_1/1/logo.png","section-1")
-        // }
-        // else if (incomingData.Command == "logo-text-result-1"){
-        //     createText("logo-text-result-1","section-1")
-        // }
-        // else if (incomingData.Command ==  "area-text-1"){
-        //     createText("area-text-1","section-1")
-        // }
-        // else if (incomingData.Command ==  "ir-led-text-1"){
-        //     createText("ir-led-text-1","section-2")
-        // }
-        // else if (incomingData.Command ==  "ir-camera-ir-img-text-1"){
-        //     createText("ir-camera-ir-img-text-1","section-2")
-        // }
-        // else if (incomingData.Command ==  "ir-img-1"){
-        //     createImage("ir-img-1","../static/assets/test_1/1/verify_no_ink.png","section-2")
-        // }
-        // else if (incomingData.Command ==  "ir-result-1"){
-        //     createText("ir-result-1","section-2")
-        // }
-        // else if (incomingData.Command ==  "sensor-text-2"){
-        //     createText("sensor-text-2","section-3")
-        // }
-        // else if (incomingData.Command ==  "sensor-result-2"){
-        //     createText("sensor-result-2","section-3")
-        // }
-        // else if (incomingData.Command ==  "intensities-img-2"){
-        //     createImage("intensities-img-2","../static/assets/test_1/2/intensities.png","section-3")
-        // }
-        // else if (incomingData.Command ==  "rates-img-2"){
-        //     createImage("rates-img-2","../static/assets/test_1/2/rates.png","section-3")
-        //     document.getElementById("popup").classList.add("open");
-        // }
-        // // ******************** 2. aşama *********************************
-        // else if (incomingData.Command == "white-led-text-2"){
-        //     document.getElementById("popup").classList.remove("open");
-        //     createText("white-led-text-2","section-3")
-        // }
-        // else if (incomingData.Command == "colourful-img-2"){
-        //     createImage('colourful-img-2',"../static/assets/test_1/2/colourful.png","section-3")
-        // }
-        // else if (incomingData.Command == "colourful-text-2"){
-        //     createText("colourful-text-2","section-3")
-        // }
-        // else if (incomingData.Command == "green-text-2"){
-        //     createText("green-text-2","section-3")
-        // }
-        // else if (incomingData.Command == "green-text-result-2"){
-        //     createText("green-text-result-2","section-3")
-        // }
-        // else if (incomingData.Command == "blue-text-2"){
-        //     createText("blue-text-2","section-3")
-        // }
-        // else if (incomingData.Command == "ir-camera-text-2"){
-        //     createText("ir-camera-text-2","section-3")
-        // }
-        // else if (incomingData.Command == "original-img-2"){
-        //     createImage("original-img-2","../static/assets/test_1/2/original_image.png","section-3")
-        // }
-        // else if (incomingData.Command ==  "original-text-2"){
-        //     createText("original-text-2","section-3")
-        // }
-        // else if (incomingData.Command ==  "barcode-text-2"){
-        //     createText("barcode-text-2","section-4")
-        // }
-        // else if (incomingData.Command == "barcode-img-2"){
-        //     createImage("barcode-img-2","../static/assets/test_1/2/barcode_image.png","section-4")
-        // }
-        // else if (incomingData.Command ==  "barcode-text-result-2"){
-        //     createText("barcode-text-result-2","section-4")
-        // }
-        // else if (incomingData.Command ==  "logo-verification-text-2"){
-        //     createText("logo-verification-text-2","section-4")
-        // }
-        // else if (incomingData.Command == "logo-img-2"){
-        //     createImage("logo-img-2","../static/assets/test_1/2/logo.png","section-4")
-        // }
-        // else if (incomingData.Command ==  "area-text-2"){
-        //     createText("area-text-2","section-4")
-        // }
-        // else if (incomingData.Command ==  "logo-text-result-2"){
-        //     createText("logo-text-result-2","section-4")
-        // }
-        // else if (incomingData.Command ==  "ir-led-text-2"){
-        //     createText("ir-led-text-2","section-4")
-        // }
-        // else if (incomingData.Command ==  "ir-camera-ir-img-text-2"){
-        //     createText("ir-camera-ir-img-text-2","section-4")
-        // }
-        // else if (incomingData.Command ==  "ir-img-2"){
-        //     createImage("ir-img-2","../static/assets/test_1/2/verify_no_ink.png","section-4")
-        // }
-        // else if (incomingData.Command ==  "ir-result-2"){
-        //     createText("ir-result-2","section-4")
-        // }
-        // else if (incomingData.Command ==  "sensor-text-1"){
-        //     createText("sensor-text-1","section-2")
-        // }
-        // else if (incomingData.Command ==  "sensor-result-1"){
-        //     createText("sensor-result-1","section-2")
-        // }
-        // else if (incomingData.Command ==  "intensities-img-1"){
-        //     createImage("intensities-img-1","../static/assets/test_1/1/intensities.png","section-2")
-        // }
-        // else if (incomingData.Command ==  "rates-img-1"){
-        //     createImage("rates-img-1","../static/assets/test_1/1/rates.png","section-2")
-        //     document.getElementById("popupfinished").classList.add("open");
-        //     document.getElementById("startbutton").style.backgroundColor = ""
-        //     document.getElementById("startbutton").disabled = false
-        // }
-        
-
-
         
 
 
 
-        
-
 
         
-
-
-        
-
-        
-
 
 
 

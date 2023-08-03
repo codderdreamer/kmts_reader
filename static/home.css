@@ -52,7 +52,9 @@ h1{
 
 .column{
     width: 250px;
-    height: auto;
+    height: 350px;
+    border: 1px solid rgb(50, 162, 196)(119, 119, 119);
+    border-radius: 5px;
     float: left;
 }
 

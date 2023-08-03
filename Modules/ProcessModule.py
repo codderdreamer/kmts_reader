@@ -30,7 +30,7 @@ class ProcessModule():
             self.application.websocket_module.send_message_to_all("dataMatrix-text")
             data = self.application.camera.dataMatrix_verification(1)
             self.application.websocket_module.send_message_to_all("dataMatrix-img")
-            self.application.websocket_module.send_message_to_all("dataMatrix-data",data)
+            self.application.websocket_module.send_message_to_all("dataMatrix-result",data)
             
             # Seri No 1 Araması
             self.application.websocket_module.send_message_to_all("seriNo1-text")
@@ -50,5 +50,15 @@ class ProcessModule():
             data = self.application.camera.seri_no_3_verification(1)
             self.application.websocket_module.send_message_to_all("seriNo3-result",data)
             self.application.websocket_module.send_message_to_all("seriNo3-img")
+
+            # Digimark Araması
+            self.application.websocket_module.send_message_to_all("digimark-text")
+            self.application.camera.dataMatrix_Verification(1)
+            self.application.websocket_module.send_message_to_all("digimark-img")
+            
+
+
+
+
             print(" while döngüsü başa dönüyor")
             time.sleep(2)

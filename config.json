@@ -85,17 +85,17 @@
             }, 
 
             "digimarkCodePoints" : {
-                "left_top_x" : 555,
-                "left_top_y" : 400,
+                "left_top_x" : 630,
+                "left_top_y" : 630,
 
-                "left_bottom_x" : 555,
-                "left_bottom_y" : 530,
+                "left_bottom_x" : 630,
+                "left_bottom_y" : 800,
 
-                "right_top_x" : 685,
-                "right_top_y" : 400,
+                "right_top_x" : 800,
+                "right_top_y" : 630,
 
-                "right_bottom_x" : 685,
-                "right_bottom_y" : 530
+                "right_bottom_x" : 800,
+                "right_bottom_y" : 800
             }, 
 
             "resolution" : 130,
