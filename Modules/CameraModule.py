@@ -320,8 +320,10 @@ class CameraModule():
         # Changing the image path
         IMAGE_PATH = self.application.test_1_file_path + str(stage) + '/' + 'seriNo1.png'
         # Same code here just changing the attribute from ['en'] to ['zh']
-        reader = easyocr.Reader(['tr'])
-        result = reader.readtext(IMAGE_PATH,paragraph="False")
+        # reader = easyocr.Reader(['tr'])
+        # result = reader.readtext(IMAGE_PATH,paragraph="False")
+        time.sleep(3)
+        result = "123"
         print (result)
         if len(result)>0:
             return result[0][1]
@@ -340,8 +342,10 @@ class CameraModule():
         # Changing the image path
         IMAGE_PATH = self.application.test_1_file_path + str(stage) + '/' + 'seriNo2.png'
         # Same code here just changing the attribute from ['en'] to ['zh']
-        reader = easyocr.Reader(['tr'])
-        result = reader.readtext(IMAGE_PATH,paragraph="False")
+        # reader = easyocr.Reader(['tr'])
+        # result = reader.readtext(IMAGE_PATH,paragraph="False")
+        time.sleep(3)
+        result = "123"
         print (result) 
         if len(result)>0:
             return result[0][1]
@@ -362,8 +366,10 @@ class CameraModule():
         # Changing the image path
         IMAGE_PATH = self.application.test_1_file_path + str(stage) + '/' + 'seriNo3.png'
         # Same code here just changing the attribute from ['en'] to ['zh']
-        reader = easyocr.Reader(['tr'])
-        result = reader.readtext(IMAGE_PATH,paragraph="False")
+        # reader = easyocr.Reader(['tr'])
+        # result = reader.readtext(IMAGE_PATH,paragraph="False")
+        time.sleep(3)
+        result = "123"
         print (result) 
         if len(result)>0:
             return result[0][1]
