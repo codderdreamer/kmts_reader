@@ -202,7 +202,7 @@ class CameraModule():
     
     def connect_colourful(self):
         print("USB CAMERA bağlanılıyor...")
-        self.colourful = cv2.VideoCapture('/dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._Arducam_16MP_SN0001-video-index0')
+        self.colourful = cv2.VideoCapture('/dev/v4l/by-id/usb-Sonix_Technology_Co.__Ltd._USB_2.0_Camera-video-index0')
         self.colourful.set(cv2.CAP_PROP_EXPOSURE, int(self.application.config.camera.colourful.exposure))
         self.colourful.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter.fourcc('M','J','P','G'))
         self.colourful.set(cv2.CAP_PROP_FRAME_WIDTH,1600)
