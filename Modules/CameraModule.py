@@ -350,6 +350,42 @@ class CameraModule():
 
         cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'digimark.png',image_original)
 
+    def result(self,stage):
+        print("Result")
+        start = time.time()
+
+        
+        start_point_dataMatrix = (self.application.config.camera.colourful.dataMatrixPoints.left_top_x, self.application.config.camera.colourful.dataMatrixPoints.left_top_y)
+        end_point_dataMatrix = (self.application.config.camera.colourful.dataMatrixPoints.right_bottom_x, self.application.config.camera.colourful.dataMatrixPoints.right_bottom_y)
+
+        start_point_seriNo1 = (self.application.config.camera.colourful.seriNoPoints1.left_top_x, self.application.config.camera.colourful.seriNoPoints1.left_top_y)
+        end_point_seriNo1 = (self.application.config.camera.colourful.seriNoPoints1.right_bottom_x, self.application.config.camera.colourful.seriNoPoints1.right_bottom_y)
+
+        start_point_seriNo2 = (self.application.config.camera.colourful.seriNoPoints2.left_top_x, self.application.config.camera.colourful.seriNoPoints2.left_top_y)
+        end_point_seriNo2 = (self.application.config.camera.colourful.seriNoPoints2.right_bottom_x, self.application.config.camera.colourful.seriNoPoints2.right_bottom_y)
+
+        start_point_seriNo3 = (self.application.config.camera.colourful.seriNoPoints3.left_top_x, self.application.config.camera.colourful.seriNoPoints3.left_top_y)
+        end_point_seriNo3 = (self.application.config.camera.colourful.seriNoPoints3.right_bottom_x, self.application.config.camera.colourful.seriNoPoints3.right_bottom_y)
+
+        start_point_digimark = (self.application.config.camera.colourful.digimarkCodePoints.left_top_x, self.application.config.camera.colourful.digimarkCodePoints.left_top_y)
+        end_point_digimark = (self.application.config.camera.colourful.digimarkCodePoints.right_bottom_x, self.application.config.camera.colourful.digimarkCodePoints.right_bottom_y)
+
+
+        
+        
+        color = (255, 0, 0)
+        thickness = 2
+
+        image_original = cv2.imread(self.application.test_1_file_path + str(stage) + '/' + 'colourful.png')
+
+        image_original = cv2.rectangle(image_original, start_point_dataMatrix, end_point_dataMatrix, color, thickness)
+        image_original = cv2.rectangle(image_original, start_point_seriNo1, end_point_seriNo1, color, thickness)
+        image_original = cv2.rectangle(image_original, start_point_seriNo2, end_point_seriNo2, color, thickness)
+        image_original = cv2.rectangle(image_original, start_point_seriNo3, end_point_seriNo3, color, thickness)
+        image_original = cv2.rectangle(image_original, start_point_digimark, end_point_digimark, color, thickness)
+
+        cv2.imwrite(self.application.test_1_file_path + str(stage) + '/' + 'result.png',image_original)
+
 
 
 

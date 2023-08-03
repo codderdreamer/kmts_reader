@@ -117,7 +117,11 @@ function connect(){
             document.getElementById("ink-text").innerHTML = "Altın Üzerindeki Mürekkep değerlerine bakılıyor..."
         } else if (incomingData.Command == "ink-result") {
             document.getElementById("ink-result").innerHTML = incomingData.Data
+        } else if (incomingData.Command == "result-img") {
+            document.getElementById("result-img").src = "../static/assets/test_1/1/result.png?" + Math.random();
         }
+
+        
         
 
         

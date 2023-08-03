@@ -73,6 +73,11 @@ class ProcessModule():
                 self.application.websocket_module.send_message_to_all("ink-result",input_registers)
             else:
                 print("Sensör açma komutu gönderilemedi !!!")
+
+            # Sonuç
+            self.application.camera.result(1)
+            self.application.websocket_module.send_message_to_all("result-img")
+            
             
 
 
