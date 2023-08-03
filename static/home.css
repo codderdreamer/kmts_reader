@@ -40,8 +40,9 @@ h1{
 
 .body-content{
     background-color: rgb(184, 184, 184);
-    padding-top: 10px;
-    padding-left: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
 
@@ -58,6 +59,7 @@ h1{
     border-color: rgb(32, 28, 255);
     border-radius: 5px;
     float: left;
+    padding: 10px;
 }
 
 .true-data{
