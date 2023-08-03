@@ -326,7 +326,8 @@ class CameraModule():
         result = "123"
         print (result)
         if len(result)>0:
-            return result[0][1]
+            # return result[0][1]
+            return result
         else:
             return None
 
@@ -348,7 +349,8 @@ class CameraModule():
         result = "123"
         print (result) 
         if len(result)>0:
-            return result[0][1]
+            # return result[0][1]
+            return result
         else:
             return None
 
@@ -372,7 +374,8 @@ class CameraModule():
         result = "123"
         print (result) 
         if len(result)>0:
-            return result[0][1]
+            # return result[0][1]
+            return result
         else:
             return None
 
