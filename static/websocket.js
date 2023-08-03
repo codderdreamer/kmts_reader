@@ -67,7 +67,7 @@ function connect(){
         } else if (incomingData.Command == "colourful-img") {
             document.getElementById("colourful-img").src = "../static/assets/test_1/1/colourful.png?" + Math.random();
         } else if (incomingData.Command == "dataMatrix-text") {
-            document.getElementById("dataMatrix-text").innerHTML = "Data matrix bulunuyor ..."
+            document.getElementById("dataMatrix-text").innerHTML = "Data matrix tespit ediliyor..."
         } else if (incomingData.Command == "dataMatrix-img") {
             document.getElementById("dataMatrix-img").src = "../static/assets/test_1/1/dataMatrix.png?" + Math.random();
         } else if (incomingData.Command == "dataMatrix-result") {
@@ -78,7 +78,7 @@ function connect(){
             }
             document.getElementById("dataMatrix-result").innerHTML = "Data matrix : " + incomingData.Data
         } else if (incomingData.Command == "seriNo1-text") {
-            document.getElementById("seriNo1-text").innerHTML = "Altın üzerindeki 1. Seri numarası bulunuyor..."
+            document.getElementById("seriNo1-text").innerHTML = "Altına kazınmış seri numarası tespit ediliyor..."
         } else if (incomingData.Command == "seriNo1-result") {
             if(incomingData.Data=="" || incomingData.Data==null){
                 document.getElementById("seriNo1-result").className = "false-data"
@@ -90,7 +90,7 @@ function connect(){
         } else if (incomingData.Command == "seriNo1-img") {
             document.getElementById("seriNo1-img").src = "../static/assets/test_1/1/seriNo1.png?" + Math.random();
         } else if (incomingData.Command == "seriNo2-text") {
-            document.getElementById("seriNo2-text").innerHTML = "Altın üzerindeki 2. Seri numarası bulunuyor..."
+            document.getElementById("seriNo2-text").innerHTML = "Paket üzerindeki seri numarası tespit ediliyor..."
         } else if (incomingData.Command == "seriNo2-result") {
             if(incomingData.Data=="" || incomingData.Data==null){
                 document.getElementById("seriNo2-result").className = "false-data"
@@ -101,7 +101,7 @@ function connect(){
         } else if (incomingData.Command == "seriNo2-img") {
             document.getElementById("seriNo2-img").src = "../static/assets/test_1/1/seriNo2.png?" + Math.random();
         } else if (incomingData.Command == "seriNo3-text") {
-            document.getElementById("seriNo3-text").innerHTML = "Altın üzerindeki 3. Seri numarası bulunuyor..."
+            document.getElementById("seriNo3-text").innerHTML = "Bandrol üzeri seri numarası tespit ediliyor..."
         } else if (incomingData.Command == "seriNo3-result") {
             if(incomingData.Data=="" || incomingData.Data==null){
                 document.getElementById("seriNo3-result").className = "false-data"
@@ -112,13 +112,13 @@ function connect(){
         } else if (incomingData.Command == "seriNo3-img") {
             document.getElementById("seriNo3-img").src = "../static/assets/test_1/1/seriNo3.png?" + Math.random();
         } else if (incomingData.Command == "digimark-text") {
-            document.getElementById("digimark-text").innerHTML = "Altın üzerindeki Digimark kodu bulunuyor..."
+            document.getElementById("digimark-text").innerHTML = "Bandrol üzeri Digimark kodu tespit ediliyor..."
         } else if (incomingData.Command == "digimark-img") {
             document.getElementById("digimark-img").src = "../static/assets/test_1/1/digimark.png?" + Math.random();
             document.getElementById("digimark-result").innerHTML = "Bulunan digimark kodu : " + digimark
             document.getElementById("digimark-result").className = "true-data"
         } else if (incomingData.Command == "ink-text") {
-            document.getElementById("ink-text").innerHTML = "Altın Üzerindeki Mürekkep değerlerine bakılıyor..."
+            document.getElementById("ink-text").innerHTML = "Bandrol üzerindeki özel mürekkep inceleniyor..."
         } else if (incomingData.Command == "ink-result") {
             document.getElementById("ink-result").innerHTML = incomingData.Data
         } else if (incomingData.Command == "result-img") {
