@@ -28,6 +28,20 @@
 
             "exposure" : 75,
 
+            "points" : {
+                "left_top_x" : 105,
+                "left_top_y" : 662,
+
+                "left_bottom_x" : 160,
+                "left_bottom_y" : 1682,
+
+                "right_top_x" : 789,
+                "right_top_y" : 652,
+
+                "right_bottom_x" : 785,
+                "right_bottom_y" : 1685
+            },
+
             "dataMatrixPoints" : {
                 "left_top_x" : 810,
                 "left_top_y" : 1142,

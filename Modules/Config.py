@@ -41,6 +41,17 @@ class Config():
         self.camera.colourful.rotation_clockwise_counter = int(data["camera"]["colourful"]["rotation_clockwise_counter"])
         self.camera.colourful.threshold = float(data["camera"]["colourful"]["threshold"])
 
+        # colourful cutting
+        self.camera.colourful.points.left_top_x = int(data["camera"]["colourful"]["points"]["left_top_x"])
+        self.camera.colourful.points.left_top_y = int(data["camera"]["colourful"]["points"]["left_top_y"])
+        self.camera.colourful.points.left_bottom_x = int(data["camera"]["colourful"]["points"]["left_bottom_x"])
+        self.camera.colourful.points.left_bottom_y = int(data["camera"]["colourful"]["points"]["left_bottom_y"])
+        self.camera.colourful.points.right_top_x = int(data["camera"]["colourful"]["points"]["right_top_x"])
+        self.camera.colourful.points.right_top_y = int(data["camera"]["colourful"]["points"]["right_top_y"])
+        self.camera.colourful.points.right_bottom_x = int(data["camera"]["colourful"]["points"]["right_bottom_x"])
+        self.camera.colourful.points.right_bottom_y = int(data["camera"]["colourful"]["points"]["right_bottom_y"])
+
+
         # data matrix 
         self.camera.colourful.dataMatrixPoints.left_top_x = int(data["camera"]["colourful"]["dataMatrixPoints"]["left_top_x"])
         self.camera.colourful.dataMatrixPoints.left_top_y = int(data["camera"]["colourful"]["dataMatrixPoints"]["left_top_y"])
