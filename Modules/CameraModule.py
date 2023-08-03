@@ -121,16 +121,16 @@ class CameraModule():
         x1 = 0
         y1 = 0
         x2 = 0
-        y2 = 70
-        x3 = 245
+        y2 = 60
+        x3 = 180
         y3 = 0
-        x4 = 245
-        y4 = 70
+        x4 = 180
+        y4 = 60
         return np.float32([[x1,y1],[x2,y2],[x3,y3],[x4,y4]])
     
     def cut_colourful_image_seriNo_1(self,frame):
         matrix = cv2.getPerspectiveTransform(self.get_colourful_seriNo_1_points(),self.get_colourful_seriNo_1_resolution_points())
-        frame = cv2.warpPerspective(frame,matrix,(245,70))
+        frame = cv2.warpPerspective(frame,matrix,(180,60))
         return frame
     
 # Seri No 2 Cutting
