@@ -57,17 +57,17 @@
             },
 
             "seriNoPoints1" : {
-                "left_top_x" : 400,
-                "left_top_y" : 620,
+                "left_top_x" : 235,
+                "left_top_y" : 870,
 
-                "left_bottom_x" : 400,
-                "left_bottom_y" : 880,
+                "left_bottom_x" : 235,
+                "left_bottom_y" : 940,
 
-                "right_top_x" : 660,
-                "right_top_y" : 620,
+                "right_top_x" : 480,
+                "right_top_y" : 870,
 
-                "right_bottom_x" : 660,
-                "right_bottom_y" : 880
+                "right_bottom_x" : 480,
+                "right_bottom_y" : 940
             },
 
             "seriNoPoints2" : {
