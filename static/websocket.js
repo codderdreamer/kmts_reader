@@ -58,7 +58,7 @@ function connect(){
             document.getElementById("seriNo3-result").className = ""
             document.getElementById("digimark-result").className = ""
             document.getElementById("ink-result").innerHTML = ""
-            document.getElementById(" result-img").src = ""
+            document.getElementById("result-img").src = ""
            
 
         } else if (incomingData.Command == "colourful-img-text") {
